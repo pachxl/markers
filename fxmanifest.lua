@@ -1,0 +1,5 @@
+fx_version 'cerulean'
+game 'gta5'
+client_script 'marker.lua'
+client_script 'draw.lua'
+author 'pach'
