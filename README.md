@@ -10,3 +10,4 @@
 
 # Known Issues:
 - Sometimes the marker just does not place, for example some mountains don't register not sure why
+- Scaling on sprites / text might seem off it seemed fine when I tested
