@@ -26,6 +26,14 @@ function UI.DrawSprite3d(data)
     -- local scale = ((1 / dist) * 2) * fov
     local scale = 0.3
     SetDrawOrigin(data.pos.x, data.pos.y, data.pos.z, 0)
+	if not HasStreamedTextureDictLoaded(data.textureDict) then
+		local timer = 1000
+		RequestStreamedTextureDict(data.textureDict, true)
+		while not HasStreamedTextureDictLoaded(data.textureDict) and timer > 0 do
+			timer = timer-1
+			Citizen.Wait(100)
+		end
+	end
     DrawSprite(
         data.textureDict,
         data.textureName,
